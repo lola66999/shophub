@@ -6,6 +6,7 @@ export interface Product {
   thumbnail: string;
    rating: number;
    description:string;
+   category: string;
 }
 
 export interface ProductsResponse {
