@@ -1,8 +1,11 @@
 
-import { getProducts } from "@/src/lib/api/product"
+import { connection } from "next/server";
+import { getProducts } from "@/src/lib/api/product";
 import ProductList from "@/components/ProductList";
 
 export default async function HomePage() {
+  await connection();
+
   const data = await getProducts();
 
   return (
